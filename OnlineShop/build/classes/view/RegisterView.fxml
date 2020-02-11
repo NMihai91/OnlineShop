@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Register Customer">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="41.0" layoutY="40.0" text="username*" />
+                        <Label layoutX="41.0" layoutY="76.0" text="password*" />
+                        <Label layoutX="25.0" layoutY="113.0" text="customer name*" />
+                        <Label layoutX="55.0" layoutY="149.0" text="email" />
+                        <TextArea fx:id="txtCustAdress" layoutX="137.0" layoutY="186.0" prefHeight="81.0" prefWidth="224.0" promptText="type in the adress" />
+                        <Label layoutX="52.0" layoutY="195.0" text="adress" />
+                        <TextField fx:id="txtCustUser" layoutX="137.0" layoutY="36.0" promptText="*required field" />
+                        <TextField fx:id="txtCustName" layoutX="137.0" layoutY="109.0" promptText="*required field" />
+                        <TextField fx:id="txtCustEmail" layoutX="137.0" layoutY="145.0" promptText="type in the email" />
+                        <Label fx:id="lblErrorMessage" layoutX="311.0" layoutY="36.0" prefHeight="37.0" prefWidth="277.0" textFill="RED" />
+                        <Button layoutX="137.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnCustRegisterClick" text="Register" />
+                        <Button layoutX="233.0" layoutY="296.0" mnemonicParsing="false" onAction="#goMain" text="Home" />
+                        <Label layoutX="137.0" layoutY="267.0" text="* Require field indicator" />
+                        <PasswordField fx:id="txtCustPassword" layoutX="137.0" layoutY="72.0" promptText="*required field" />
+                        <Label fx:id="lblSuccessMessage" layoutX="300.0" layoutY="78.0" prefHeight="62.0" prefWidth="295.0" textFill="#006aff" />
+                     </children>
+                  </Pane>
+               </content></Tab>
+          <Tab text="Register Provider">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="34.0" text="username*" />
+                        <Label layoutX="35.0" layoutY="67.0" text="password*" />
+                        <Label layoutX="21.0" layoutY="101.0" text="provider name*" />
+                        <Label layoutX="48.0" layoutY="138.0" text="email" />
+                        <PasswordField fx:id="txtProvPassword" layoutX="138.0" layoutY="63.0" promptText="*required field" />
+                        <TextField fx:id="txtProvUser" layoutX="138.0" layoutY="30.0" promptText="*required field" />
+                        <TextField fx:id="txtProvName" layoutX="138.0" layoutY="97.0" promptText="*required field" />
+                        <TextField fx:id="txtProvEmail" layoutX="138.0" layoutY="134.0" promptText="type in the email" />
+                        <Label fx:id="lblProvErrorMessage" layoutX="312.0" layoutY="30.0" prefHeight="46.0" prefWidth="269.0" textFill="RED" />
+                        <Label layoutX="138.0" layoutY="159.0" text="* Require field indicator" />
+                        <Button layoutX="138.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnProvRegisterClick" text="Register" />
+                        <Button layoutX="229.0" layoutY="204.0" mnemonicParsing="false" onAction="#goMain" text="Home" />
+                        <Label fx:id="lblProvSuccessMessage" layoutX="300.0" layoutY="86.0" prefHeight="47.0" prefWidth="291.0" textFill="#0080ff" />
+                     </children>
+                  </Pane>
+               </content></Tab>
+        </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="330.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="18.0" layoutY="35.0" text="Product Name:" />
+            <Label layoutX="21.0" layoutY="70.0" text="Product Price:" />
+            <Label layoutX="21.0" layoutY="105.0" text="Product Quantity:" />
+            <Label layoutX="13.0" layoutY="150.0" text="Product Description:" />
+            <TextField fx:id="txtAddProvProdName" layoutX="137.0" layoutY="31.0" promptText="*required field" />
+            <TextField fx:id="txtAddProvProdPrice" layoutX="137.0" layoutY="66.0" promptText="*required field" />
+            <TextField fx:id="txtAddProvProdQuantity" layoutX="137.0" layoutY="101.0" promptText="*required field" />
+            <TextArea fx:id="txtAddProvProdDescription" layoutX="137.0" layoutY="150.0" prefHeight="126.0" prefWidth="149.0" promptText="type in the description" />
+            <Button layoutX="150.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnProvAddProduct" text="Add" />
+            <Button layoutX="211.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Cancel" />
+            <Label layoutX="16.0" layoutY="174.0" text="*Require field indicator">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErrorMessage" layoutX="90.0" layoutY="3.0" prefHeight="23.0" prefWidth="198.0" textFill="RED" />
+            <Label fx:id="lblSuccessMessage" layoutX="116.0" layoutY="3.0" prefHeight="23.0" prefWidth="170.0" textFill="#0064ff" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

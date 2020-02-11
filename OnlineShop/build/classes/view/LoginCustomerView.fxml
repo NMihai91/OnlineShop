@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginCustomerController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#goMain" prefHeight="0.0" prefWidth="54.0" text="Log off" />
+            <Label layoutX="18.0" layoutY="15.0" text="Providers" />
+            <ListView fx:id="productsList" layoutX="12.0" layoutY="138.0" prefHeight="141.0" prefWidth="173.0" />
+            <Label layoutX="14.0" layoutY="120.0" text="Products" />
+            <Label layoutX="307.0" layoutY="15.0" text="Product info" />
+            <Button layoutX="427.0" layoutY="149.0" mnemonicParsing="false" onAction="#btnAddCredit" prefHeight="26.0" prefWidth="59.0" text="Refill" />
+            <TextField fx:id="txtAddCredit" layoutX="427.0" layoutY="119.0" prefHeight="27.0" prefWidth="92.0" promptText="sum" />
+            <Button layoutX="501.0" layoutY="237.0" mnemonicParsing="false" onAction="#showBillPage" prefHeight="25.0" prefWidth="61.0" text="Bills" />
+            <Separator layoutX="412.0" layoutY="13.0" orientation="VERTICAL" prefHeight="265.0" prefWidth="3.0" />
+            <Label layoutX="226.0" layoutY="44.0" text="Name" />
+            <Label layoutX="229.0" layoutY="78.0" text="Price" />
+            <Label layoutX="218.0" layoutY="112.0" text="Available" />
+            <Label layoutX="224.0" layoutY="145.0" text="Details" />
+            <TextField fx:id="infoName" layoutX="276.0" layoutY="40.0" prefHeight="25.0" prefWidth="128.0" />
+            <TextField fx:id="infoPrice" layoutX="276.0" layoutY="74.0" prefHeight="25.0" prefWidth="130.0" />
+            <TextArea fx:id="infoDetails" layoutX="277.0" layoutY="138.0" prefHeight="102.0" prefWidth="129.0" />
+            <TextField fx:id="infoQuantity" layoutX="276.0" layoutY="107.0" prefHeight="25.0" prefWidth="130.0" />
+            <Button layoutX="308.0" layoutY="256.0" mnemonicParsing="false" onAction="#btnAddProductToCart" prefHeight="25.0" prefWidth="77.0" text="Add to cart" />
+            <TextField fx:id="quantityPurchased" layoutX="230.0" layoutY="256.0" prefHeight="25.0" prefWidth="60.0" promptText="quantity" />
+            <Button layoutX="17.0" layoutY="293.0" mnemonicParsing="false" onAction="#showCart" prefHeight="93.0" prefWidth="65.0" text="Info Cart" />
+            <Button layoutX="426.0" layoutY="66.0" mnemonicParsing="false" onAction="#currentBalance" prefHeight="25.0" prefWidth="71.0" text="Ballance" />
+            <Button layoutX="426.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnRating" prefHeight="26.0" prefWidth="61.0" text="Rating" />
+            <Label fx:id="lblSuccessMessage" layoutX="426.0" layoutY="175.0" prefHeight="51.0" prefWidth="155.0" textFill="#0015ff" />
+            <Label fx:id="lblErrorMessage" layoutX="426.0" layoutY="178.0" prefHeight="22.0" prefWidth="159.0" textFill="RED" />
+            <Button layoutX="520.0" layoutY="120.0" mnemonicParsing="false" onAction="#clearCreditSum" prefHeight="0.0" prefWidth="23.0" text="X" />
+            <Label layoutX="456.0" layoutY="15.0" text="Account information" />
+            <ListView fx:id="providersList" layoutX="14.0" layoutY="31.0" prefHeight="86.0" prefWidth="170.0" />
+            <Separator layoutX="205.0" layoutY="31.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="5.0" />
+            <Separator layoutX="203.0" layoutY="138.0" orientation="VERTICAL" prefHeight="140.0" prefWidth="3.0" />
+            <TextField fx:id="txtCurrentBalance" layoutX="426.0" layoutY="40.0" prefHeight="25.0" prefWidth="114.0" promptText="hidden credit" />
+            <Button layoutX="500.0" layoutY="66.0" mnemonicParsing="false" onAction="#hideCurrentBalance" prefHeight="25.0" prefWidth="41.0" text="Hide" />
+            <Label fx:id="succesAddProductMessage" layoutX="212.0" layoutY="240.0" prefHeight="17.0" prefWidth="186.0" textFill="#001eff" />
+            <Label fx:id="errorAddProductMessage" layoutX="216.0" layoutY="240.0" prefHeight="17.0" prefWidth="183.0" textFill="RED" />
+            <Button fx:id="btnPayNow" layoutX="99.0" layoutY="293.0" mnemonicParsing="false" onAction="#btnConfirmAndPay" text="Confirm and pay" />
+            <Button layoutX="99.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnPayLater" text="Request products and pay later" />
+            <Button layoutX="99.0" layoutY="361.0" mnemonicParsing="false" onAction="#emptyTheCart" text="Empty the cart" />
+            <Label fx:id="txtConfirmAndPay" layoutX="212.0" layoutY="297.0" prefHeight="17.0" prefWidth="121.0" textFill="#1100ff" />
+            <Label fx:id="txtRequestProductsAndPayLater" layoutX="291.0" layoutY="331.0" prefHeight="17.0" prefWidth="206.0" textFill="#1100ff" />
+            <Label fx:id="txtEmptyTheCart" layoutX="198.0" layoutY="365.0" prefHeight="17.0" prefWidth="98.0" textFill="#2200ff" />
+            <Label fx:id="txtRating" layoutX="426.0" layoutY="273.0" prefHeight="17.0" prefWidth="144.0" textFill="#0004ff" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
